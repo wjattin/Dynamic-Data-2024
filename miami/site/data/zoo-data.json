@@ -1,5 +1,4 @@
-
-{
+ {
     "title":"Welcome To Miami",
     "abstract":"This is the abstract",
     "image":"/images/miamisky.jpg",
@@ -28,10 +27,17 @@
     "packages":[
         {
             "title":"Beach day",
-            "description":"package description goes here. i.e spend the day at the W in miami  beach",
+            "description":"package description goes here. i.e spend the day at the W in miami beach",
             "image":"/images/homepage/beachday.jpg",
             "price":"1500",
             "duration":"1 Day"
         },
+        {
+            "title":"Beach day",
+            "description":"package description goes here. i.e spend the day at the W in miami  beach",
+            "image":"/images/homepage/beachday.jpg",
+            "price":"1500",
+            "duration":"1 Day"
+        }
     ]
 }
