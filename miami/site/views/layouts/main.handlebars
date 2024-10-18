@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{title}}</title>
     {{!-- Import css styles --}}
     <link rel="stylesheet" href="/css/bootstrap.css">
-    {{!-- Overrides go last --}}
+<link rel="stylesheet" href="/owl/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="/owl/assets/owl.theme.default.min.css">    {{!-- Overrides go last --}}
     <link rel="stylesheet" href="/css/miami.css">
 </head>
 <body>
@@ -14,12 +15,61 @@
    {{>nav siteName="Miami Travel Site" date="10/03/2024"}}
     {{!-- Default placeholder for handlebars --}}
    <div class="container">
-   
-   {{{body}}}
-
-    {{>gallery}}
+      {{{body}}}
+        {{!-- Add gallery partial --}}
+        {{>gallery}}
     </div>
-
+    <!-- jQuery should always be the first script -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="/js/bootstrap.bundle.js"></script>
+    <script src="/owl/owl.carousel.min.js"></script>
+
+<script>
+$(function(){
+    //Slideshow
+   $('.owl-slideshow').owlCarousel({
+    loop:true,
+    margin:0,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        1000:{
+            items:1
+        }
+    }
+    });
+    //packages
+    $('.owl-packages').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:2
+        },
+        1000:{
+            items:3
+        }
+    }
+    });
+
+
+});
+</script>
+
+
+<script>
+    $(function(){
+        alert('Document Ready!');
+    });
+</script>
 </body>
 </html>

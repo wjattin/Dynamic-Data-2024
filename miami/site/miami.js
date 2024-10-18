@@ -28,13 +28,25 @@ const gallery = require("./data/gallery.json")
 //process routes before error
 app.get('/',(request,response)=>{
     console.log(gallery)
+    //Import page-specific data
+    const data = require("./data/home-data.json")
     response.render('landing',{
         gallery,
-        title:"This is Miami!!",
-        abstract:"Miami is a great place to live.",
-        image:"miamisky.jpg"
+        data
     })
 })
+
+app.get('/zoo',(request,response)=>{
+    console.log(gallery)
+    //Import page-specific data
+    const data = require("./data/zoo-data.json")
+    response.render('landing',{
+        gallery,
+        data
+    })
+})
+
+
 app.get('/about',(request,response)=>{
     response.render('page',{
         title:"About Miami",
